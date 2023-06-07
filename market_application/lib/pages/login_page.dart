@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:modernlogintute/components/my_button.dart';
-import 'package:modernlogintute/components/my_textfield.dart';
-import 'package:modernlogintute/components/square_tile.dart';
+import 'package:market_application/components/my_button.dart';
+import 'package:market_application/components/my_textfield.dart';
+import 'package:market_application/components/square_tile.dart';
+
+
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -16,7 +18,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.brown[300],
       body: SafeArea(
         child: Center(
           child: Column(
@@ -34,9 +36,9 @@ class LoginPage extends StatelessWidget {
 
               // welcome back, you've been missed!
               Text(
-                'Welcome back you\'ve been missed!',
+                'Bine ai revenit, ne-a fost dor de tine!',
                 style: TextStyle(
-                  color: Colors.grey[700],
+                  color: Colors.blue[700],
                   fontSize: 16,
                 ),
               ),
@@ -46,7 +48,7 @@ class LoginPage extends StatelessWidget {
               // username textfield
               MyTextField(
                 controller: usernameController,
-                hintText: 'Username',
+                hintText: 'Nume de utilizator',
                 obscureText: false,
               ),
 
@@ -55,7 +57,7 @@ class LoginPage extends StatelessWidget {
               // password textfield
               MyTextField(
                 controller: passwordController,
-                hintText: 'Password',
+                hintText: 'Parola',
                 obscureText: true,
               ),
 
@@ -68,8 +70,8 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey[600]),
+                      'Am uitat parola',
+                      style: TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
@@ -98,14 +100,14 @@ class LoginPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Or continue with',
-                        style: TextStyle(color: Colors.grey[700]),
+                        'Sau logheaza-te cu: ',
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                     Expanded(
                       child: Divider(
                         thickness: 0.5,
-                        color: Colors.grey[400],
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -135,14 +137,14 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Not a member?',
-                    style: TextStyle(color: Colors.grey[700]),
+                    'Nu esti membru?',
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(width: 4),
                   const Text(
-                    'Register now',
+                    'Inregistreaza-te',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
