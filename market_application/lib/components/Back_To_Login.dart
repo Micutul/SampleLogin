@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class MyButton extends StatelessWidget {
+class BackToLogin extends StatelessWidget {
   final Function()? onTap;
 
-  const MyButton({super.key, required this.onTap});
+  const BackToLogin({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class MyButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Align(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.center,
           child: Text(
-            "Logare",
+            "Inapoi la logare",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,

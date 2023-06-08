@@ -24,12 +24,12 @@ class MyTextField extends StatelessWidget {
               borderSide: BorderSide(color: Colors.white),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade400),
+              borderSide: BorderSide(color: Colors.white),
             ),
-            fillColor: Colors.grey.shade200,
+            fillColor: Colors.white,
             filled: true,
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey[500])),
+            hintStyle: TextStyle(color: Colors.black)),
       ),
     );
   }

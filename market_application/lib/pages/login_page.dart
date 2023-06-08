@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:market_application/components/my_button.dart';
 import 'package:market_application/components/my_textfield.dart';
 import 'package:market_application/components/square_tile.dart';
+import 'package:market_application/components/autentificare.dart';
+import 'package:market_application/pages/registration_page.dart';
+
 
 
 
@@ -18,32 +21,33 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[300],
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.brown,
       body: SafeArea(
-        child: Center(
+        child: SingleChildScrollView(padding: EdgeInsets.all(32),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               // logo
               const Icon(
                 Icons.lock,
-                size: 100,
+                size: 50,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               // welcome back, you've been missed!
               Text(
                 'Bine ai revenit, ne-a fost dor de tine!',
                 style: TextStyle(
-                  color: Colors.blue[700],
+                  color: Colors.white,
                   fontSize: 16,
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 5),
 
               // username textfield
               MyTextField(
@@ -52,7 +56,7 @@ class LoginPage extends StatelessWidget {
                 obscureText: false,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
 
               // password textfield
               MyTextField(
@@ -61,7 +65,7 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
 
               // forgot password?
               Padding(
@@ -77,14 +81,22 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               // sign in button
               MyButton(
                 onTap: signUserIn,
+
+              ),
+              const SizedBox(height: 10),
+
+              // autentificare
+              MyButtonAutentificare(
+                onTap: () => Navigator
+                    .push(context,  MaterialPageRoute(builder: (_) => RegistrationPage())),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 15),
 
               // or continue with
               Padding(
@@ -114,7 +126,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 15),
 
               // google + apple sign in buttons
               Row(
