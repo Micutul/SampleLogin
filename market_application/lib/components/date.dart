@@ -32,7 +32,7 @@ class _DatePickerButtonState extends State<DatePickerButton> {
       children: [
         ElevatedButton(
           onPressed: () => _selectDate(context),
-          child: Text('Select Date'),
+          child: Text('Selecteaza Data'),
         ),
         SizedBox(height: 16),
         Text(
