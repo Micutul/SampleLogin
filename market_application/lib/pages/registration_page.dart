@@ -6,6 +6,10 @@ import 'package:market_application/components/my_textfield.dart';
 import 'package:market_application/components/square_tile.dart';
 import 'package:market_application/components/autentificare.dart';
 import 'package:market_application/pages/login_page.dart';
+import 'package:market_application/components/date.dart';
+import 'package:market_application/components/sex_button.dart';
+
+
 
 
 
@@ -61,16 +65,12 @@ class RegistrationPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 5),
-              MyTextField(
-                  controller: data_nastereController,
-                  hintText: 'Data nastere',
-                  obscureText: false),
+              
+              DatePickerButton(),
 
               const SizedBox(height: 5),
-              MyTextField(
-                  controller: sexController,
-                  hintText: 'Sex',
-                  obscureText: false),
+
+              SexSelectionButton(),
 
 
               const SizedBox(height: 20),
