@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 class FinishAutentification extends StatelessWidget {
   final void Function()? onTap;
+  final Widget child;
 
-  const FinishAutentification({Key? key, required this.onTap}) : super(key: key);
+  const FinishAutentification({Key? key, required this.onTap, required this.child})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +27,7 @@ class FinishAutentification extends StatelessWidget {
                 color: Colors.white,
               ),
               const SizedBox(width: 10),
-              Text(
-                "Finalizare Autentificare",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                ),
-              ),
+              child,
             ],
           ),
         ),
