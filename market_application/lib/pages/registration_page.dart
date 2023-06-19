@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:market_application/components/Autentificare_finish.dart';
 import 'package:market_application/components/Back_To_Login.dart';
-import 'package:market_application/components/my_button.dart';
+
 import 'package:market_application/components/my_textfield.dart';
-import 'package:market_application/components/square_tile.dart';
-import 'package:market_application/components/autentificare.dart';
+
+
 import 'package:market_application/pages/login_page.dart';
 import 'package:market_application/components/date.dart';
 import 'package:market_application/components/sex_button.dart';
@@ -12,7 +12,7 @@ import 'package:market_application/components/pop_up.dart';
 import 'dart:async';
 
 class RegistrationPage extends StatefulWidget {
-  RegistrationPage({Key? key}) : super(key: key);
+  const RegistrationPage({Key? key}) : super(key: key);
 
   @override
   _RegistrationPageState createState() => _RegistrationPageState();
